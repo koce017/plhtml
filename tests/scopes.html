@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>`Scopes Test`</title>
+    </head>
+    <body>
+
+        <main>
+
+            <var class="integer">a</var>
+            <data value="1">a</data>
+            <output>a + `\n`</output>
+
+            <div data-if="true">
+
+                <div data-if="true">
+
+                    <var class="integer">a</var>
+                    <data value="3">a</data>
+                    <output>a + `\n`</output>
+
+                </div>
+
+                <output>a + `\n`</output>
+
+                <var class="integer">a</var>
+                <data value="2">a</data>
+                <output>a + `\n`</output>
+
+            </div>
+
+        </main>
+
+    </body>
+</html>

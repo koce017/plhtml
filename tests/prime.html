@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>`Prime Checker`</title>
+    </head>
+    <body>
+
+        <main>
+
+            <var class="integer">quit</var>
+
+            <div data-while="quit &ne; 1">
+
+                <var class="integer">n</var>
+                <var class="integer">i</var>
+                <var class="boolean">prime</var>
+
+                <output>`n: `</output>
+                <input name="n">
+
+                <data value="2">i</data>
+                <data value="true">prime</data>
+
+                <div data-while="i &leq; n / 2 &and; prime">
+
+                    <div data-if="n % i &equals; 0">
+                        <data value="false">prime</data>
+                    </div>
+
+                    <data value="i + 1">i</data>
+
+                </div>
+
+                <div data-if="prime">
+                    <output>n + ` is prime`</output>
+                </div>
+
+                <div data-if="!prime">
+                    <output>n + ` is not prime`</output>
+                </div>
+
+                <output>`\nType 1 to quit: `</output>
+                <input name="quit">
+
+            </div>
+
+        </main>
+
+    </body>
+</html>

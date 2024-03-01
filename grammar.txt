@@ -1,0 +1,53 @@
+prog = '<' '!' Doctype Html '>' '<' HTML Lang '=' '"' Identifier '"' '>' prog_header prog_body '<' '/' HTML '>'
+prog_header = '<' Head '>' prog_title '<' '/' HEAD '>'
+prog_title  = '<' Title '>' StringConst '<' '/' Title '>'
+prog_body   = '<' Body '>' func_main '<' '/' Body '>'
+func_main   = '<' Main '>' stmts '<' '/' Main '>'
+
+stmt = stmt_ctrl
+     | '<' Var Class '=' '"' Identifier '"' '>' Identifier '<' '/' Var '>'
+     | '<' Data Value '=' '"' expr '"' '>' Identifier '<' '/' Data '>'
+     | '<' Output '>' expr '<' '/' Output '>'
+     | '<' Input Name '=' '"' Identifier '"' '>'
+
+stmt_ctrl = '<' Div Data '-' If '=' '"' expr '"' '>' stmts '<' '/' Div '>'
+          | '<' Div Data '-' While '=' '"' expr '"' '>' stmts '<' '/' Div '>'
+
+stmts = stmt*
+
+expr = expr_l1
+expr_l1 = expr_l2 (binop1 expr_l2)*
+expr_l2 = expr_l3 (binop2 expr_l3)*
+expr_l3 = expr_l4 (binop3 expr_l4)*
+expr_l4 = expr_l5 (binop4 expr_l5)*
+expr_l5 = factor (binop5 factor)*
+
+factor = IntConst
+       | RealConst
+       | BoolConst
+       | StringConst
+       | Identifier
+       | '(' expr ')'
+       | unrop factor
+
+unrop = '+'
+      | '-'
+      | '!'
+
+binop1 = AndOp
+       | OrOp
+
+bionp2 = EqOp
+       | NeqOp
+
+binop3 = LtOp
+       | GtOp
+       | LeqOp
+       | GeqOp
+
+binop4 = '+'
+       | '-'
+
+binop5 = '*'
+       | '/'
+       | '%'
