@@ -1,0 +1,21 @@
+"Prime Checker"
+Main:
+    integer quit
+    While quit NeqOp 1
+        integer n
+        integer i
+        boolean prime
+        Write: "n: "
+        Read n
+        i = 2
+        prime = true
+        While i LeqOp n / 2 AndOp prime
+            If n % i EqOp 0
+                prime = false
+            i = i + 1
+        If prime
+            Write: n + " is prime"
+        If !prime
+            Write: n + " is not prime"
+        Write: "\nType 1 to quit: "
+        Read quit

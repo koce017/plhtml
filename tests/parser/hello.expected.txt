@@ -1,0 +1,6 @@
+"Hello World"
+Main:
+    Write: "Enter your name: "
+    string str
+    Read str
+    Write: "Hello " + str + "!"
