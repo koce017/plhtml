@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>`Factorial`</title>
+    </head>
+    <body>
+
+        <main>
+
+            <var class="integer">quit</var>
+
+            <div data-while="quit &ne; 1">
+
+                <var class="integer">n</var>
+                <var class="integer">i</var>
+                <var class="integer">fact</var>
+
+                <data value="1">i</data>
+                <data value="1">fact</data>
+
+                <output>`n: `</output>
+                <input name="n">
+
+                <div data-while="i &leq; n">
+                    <data value="fact * i">fact</data>
+                    <data value="i + 1">i</data>
+                </div>
+
+                <output>`Factorial of ` + n + ` is ` + fact</output>
+
+                <output>`\nType 1 to quit: `</output>
+                <input name="quit">
+
+            </div>
+
+        </main>
+
+    </body>
+</html>

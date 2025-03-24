@@ -1,0 +1,22 @@
+"Fibonacci numbers"
+Main:
+    integer quit
+    While quit NeqOp 1
+        integer a
+        integer b
+        integer c
+        integer i
+        integer n
+        a = 0
+        b = 1
+        i = 1
+        Write: "n: "
+        Read n
+        While i LeqOp n
+            Write: a + " "
+            c = a + b
+            a = b
+            b = c
+            i = i + 1
+        Write: "\nType 1 to quit: "
+        Read quit

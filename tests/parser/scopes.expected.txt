@@ -1,0 +1,14 @@
+"Scopes Test"
+Main:
+    integer a
+    a = 1
+    Write: a + "\n"
+    If true
+        If true
+            integer a
+            a = 3
+            Write: a + "\n"
+        Write: a + "\n"
+        integer a
+        a = 2
+        Write: a + "\n"

@@ -1,0 +1,19 @@
+"Leap Year"
+Main:
+    integer quit
+    While quit NeqOp 1
+        integer year
+        boolean answer
+        Write: "year: "
+        Read year
+        If year % 4 EqOp 0
+            If year % 100 NeqOp 0
+                answer = true
+            If year % 400 EqOp 0
+                answer = true
+        If answer
+            Write: year + " is leap year"
+        If !answer
+            Write: year + " is not leap year"
+        Write: "\nType 1 to quit: "
+        Read quit

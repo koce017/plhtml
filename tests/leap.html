@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>`Leap Year`</title>
+    </head>
+    <body>
+
+        <main>
+
+            <var class="integer">quit</var>
+
+            <div data-while="quit &ne; 1">
+
+                <var class="integer">year</var>
+                <var class="boolean">answer</var>
+
+                <output>`year: `</output>
+                <input name="year">
+
+                <div data-if="year % 4 &equals; 0">
+
+                    <div data-if="year % 100 &ne; 0">
+                        <data value="true">answer</data>
+                    </div>
+
+                    <div data-if="year % 400 &equals; 0">
+                        <data value="true">answer</data>
+                    </div>
+
+                </div>
+
+                <div data-if="answer">
+                    <output>year + ` is leap year`</output>
+                </div>
+
+                <div data-if="!answer">
+                    <output>year + ` is not leap year`</output>
+                </div>
+
+                <output>`\nType 1 to quit: `</output>
+                <input name="quit">
+
+            </div>
+
+        </main>
+
+    </body>
+</html>
