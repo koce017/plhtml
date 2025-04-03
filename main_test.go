@@ -1,15 +1,15 @@
 package main
 
 import (
-    "fmt"
-    "strconv"
-    "strings"
-    "testing"
+	"fmt"
+	"strconv"
+	"strings"
+	"testing"
 
-    "plhtml/parser"
-    "plhtml/scanner"
-    "plhtml/token"
-    "plhtml/util"
+	"plhtml/parser"
+	"plhtml/scanner"
+	"plhtml/token"
+	"plhtml/util"
 )
 
 var tests = [...]string{
@@ -18,22 +18,27 @@ var tests = [...]string{
     "hello",
     "leap",
     "prime",
+	"reals",
     "scopes",
 }
 
 func TestScanner(t *testing.T) {
     for _, test := range tests {
-        tokens := scan("./tests/" + test + ".html")
-        compare(t, "scanner/"+test, tokensToString(tokens))
+		if util.FileExists("./tests/scanner/" + test + ".expected.txt") {
+			tokens := scan("./tests/" + test + ".html")
+			compare(t, "scanner/"+test, tokensToString(tokens))
+		}
     }
 }
 
 func TestParser(t *testing.T) {
     for _, test := range tests {
-        tokens := scan("./tests/" + test + ".html")
-        myParser := parser.New()
-        prgNode := myParser.Parse(tokens)
-        compare(t, "parser/"+test, prgNode.ToString())
+		if util.FileExists("./tests/parser/" + test + ".expected.txt") {
+			tokens := scan("./tests/" + test + ".html")
+			myParser := parser.New()
+			prgNode := myParser.Parse(tokens)
+			compare(t, "parser/"+test, prgNode.ToString())
+		}
     }
 }
 

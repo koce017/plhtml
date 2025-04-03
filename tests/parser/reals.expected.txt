@@ -1,0 +1,8 @@
+"Reals Test"
+Main:
+    real a
+    a = 1.000000
+    Write: a + "\n"
+    real b
+    b = 1.000000
+    Write: b + "\n"

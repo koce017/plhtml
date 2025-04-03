@@ -1,11 +1,9 @@
 People who "program" in HTML and call themselves "programmers" can finally be programmers for real.
 
 All code written in the programming language HTML (PL/HTML for short) is syntactically valid HTML code
-(validated using [W3C validator][1]), which was one of the main goals during language design.
+(validated using [W3C validator](https://validator.w3.org/#validate-by-input)), which was one of the main goals during language design.
 Also, the names of all statements were handpicked from the list of HTML elements in such a way that name or
 description of an element describes the meaning of the statement (`var`, `input`, `output`, etc).
-
-[1]: https://validator.w3.org/#validate-by-input
 
 The following program displays the first `n` numbers in the Fibonacci series.
 
@@ -48,9 +46,13 @@ The following program displays the first `n` numbers in the Fibonacci series.
 
 ```
 
-**BUG NOTE:** If you get *Unexpected token 'EOF' at 0:0* as an error place an empty line at the end of the file.
-
 Other examples can be found in the *tests/* folder.
+
+Usage
+
+```bash
+plhtml <source_file> [<input_file>]
+```
 
 # Specification
   * Keywords: `doctype`, `lang`, `html`, `head`, `title`,`body`, `main`, `var`, `class`, `output`, `input`, `name`, `data`, `value`, `div`, `if`, `while`

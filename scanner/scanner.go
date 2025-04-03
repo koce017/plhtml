@@ -1,15 +1,15 @@
 package scanner
 
 import (
-    "errors"
-    "fmt"
-    "strconv"
-    "strings"
-    "unicode"
+	"errors"
+	"fmt"
+	"strconv"
+	"strings"
+	"unicode"
 
-    "plhtml/logger"
-    "plhtml/token"
-    "plhtml/util"
+	"plhtml/logger"
+	"plhtml/token"
+	"plhtml/util"
 )
 
 var myLogger = logger.New("SCANNER")
@@ -231,9 +231,9 @@ func (scanner *Scanner) lexNumber(ch rune, tokenStart tokenStartPair) Token {
     for ch, ok = scanner.nextChar(); ok; ch, ok = scanner.nextChar() {
 
         if ch == '.' && !isReal {
-			number += "."
-			isReal = true
-		} else if unicode.IsNumber(ch) {
+            number += "."
+            isReal = true
+        } else if unicode.IsNumber(ch) {
             number += string(ch)
         } else {
             scanner.goBack()
@@ -333,7 +333,7 @@ func (scanner *Scanner) lookahead(i int) (rune, bool) {
 
 func (scanner *Scanner) nextChar() (rune, bool) {
 
-    if scanner.index >= len(scanner.source)-1 {
+    if scanner.index >= len(scanner.source) {
         return 0, false
     }
 
@@ -357,7 +357,7 @@ func (scanner *Scanner) nextChar() (rune, bool) {
 }
 
 func (scanner *Scanner) goBack() {
-    if scanner.index < len(scanner.source) {
+    if scanner.index <= len(scanner.source) {
 
         scanner.index--
         ch := scanner.source[scanner.index]

@@ -17,7 +17,7 @@ Head
 <
 Title
 >
-StringConst|Fibonacci numbers|
+StringConst|Fibonacci Series|
 <
 /
 Title

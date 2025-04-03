@@ -1,4 +1,4 @@
-"Fibonacci numbers"
+"Fibonacci Series"
 Main:
     integer quit
     While quit NeqOp 1
