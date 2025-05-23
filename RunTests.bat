@@ -1,4 +1,3 @@
-go build -o plhtml.exe
 plhtml tests/factorial.html tests/interpreter/factorial.in.txt
 plhtml tests/fibonacci.html tests/interpreter/fibonacci.in.txt
 plhtml tests/hello.html tests/interpreter/hello.in.txt

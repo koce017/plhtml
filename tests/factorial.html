@@ -7,9 +7,9 @@
 
         <main>
 
-            <var class="integer">quit</var>
+            <var class="string">quit</var>
 
-            <div data-while="quit &ne; 1">
+            <div data-while="quit &ne; `q`">
 
                 <var class="integer">n</var>
                 <var class="integer">i</var>
@@ -28,7 +28,7 @@
 
                 <output>`Factorial of ` + n + ` is ` + fact</output>
 
-                <output>`\nType 1 to quit: `</output>
+                <output>`\nType q to quit: `</output>
                 <input name="quit">
 
             </div>
