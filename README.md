@@ -1,4 +1,4 @@
-People who "program" in HTML and call themselves "programmers" can finally be programmers for real.
+People who "program" in HTML and call themselves "programmers" can finally be real programmers.
 
 All code written in the programming language HTML (PL/HTML for short) is syntactically valid HTML code
 (validated using [W3C validator](https://validator.w3.org/#validate-by-input)), which was one of the main goals during language design.
@@ -55,12 +55,57 @@ plhtml <source_file> [<input_file>]
 ```
 
 # Specification
-  * Keywords: `doctype`, `lang`, `html`, `head`, `title`,`body`, `main`, `var`, `class`, `output`, `input`, `name`, `data`, `value`, `div`, `if`, `while`
-  * Builtin types: `integer`, `real`, `boolean`, `string`
-  * Arithmetical operators: `+`, `-`, `*`, `/`, `%`, `(`, `)`
-  * Logical operators: `&and;`, `&or;`, `!`
-  * Comparison operators: `&lt;`, `&gt;`, `&leq;`, `&geq;`, `&equals;`, `&ne;`
-  * Special characters: `\\`, `\t`, `\n`
+Keywords:
+ - `doctype`
+ - `lang`
+ - `html`
+ - `head`
+ - `title`
+ - `body`
+ - `main`
+ - `var`
+ - `class`
+ - `output`
+ - `input`
+ - `name`
+ - `data`
+ - `value`
+ - `div`
+ - `if`
+ - `while`
+
+Builtin types:
+ - `integer`
+ - `real`
+ - `boolean`
+ - `string`
+
+Arithmetical operators:
+ - `+`
+ - `-`
+ - `*`
+ - `/`
+ - `%`
+ - `(`
+ - `)`
+
+Logical operators:
+ - `&and;`
+ - `&or;`
+ - `!`
+
+Comparison operators:
+ - `&lt;`
+ - `&gt;`
+ - `&leq;`
+ - `&geq;`,
+ - `&equals;`
+ - `&ne;`
+
+Special characters:
+ - `\\`
+ - `\t`
+ - `\n`
 
 # References
 Useful reading materials:
@@ -68,7 +113,3 @@ Useful reading materials:
   - [Implementing Lexers and Parsers](http://www.cse.chalmers.se/edu/year/2015/course/DAT150/lectures/proglang-04.html)
   - [A Simple Recursive Descent Parser](http://math.hws.edu/javanotes/c9/s5.html)
   - [Let’s Build A Simple Interpreter](https://ruslanspivak.com/lsbasi-part1/)
-
-Source code of compilers for some programming languages:
-  - [Go](https://github.com/golang/go/blob/master/src/go)
-  - [TypeScript](https://github.com/microsoft/TypeScript/tree/master/src/compiler)
