@@ -1,8 +1,7 @@
 People who "program" in HTML and call themselves "programmers" can finally be real programmers.
 
 All code written in the programming language HTML (PL/HTML for short) is syntactically valid HTML code
-(validated using [W3C validator](https://validator.w3.org/#validate-by-input)), which was one of the main goals during language design.
-Also, the names of all statements were handpicked from the list of HTML elements in such a way that name or
+(validated using [W3C validator](https://validator.w3.org/#validate-by-input)), which was one of the main goals during language design. Also, the names of all statements were handpicked from the list of HTML elements in such a way that name or
 description of an element describes the meaning of the statement (`var`, `input`, `output`, etc).
 
 The following program displays the first `n` numbers in the Fibonacci series.
@@ -46,13 +45,15 @@ The following program displays the first `n` numbers in the Fibonacci series.
 
 ```
 
-Other examples can be found in the *tests/* folder.
+Other examples can be found in the *./samples/* folder.
 
 Usage
 
 ```bash
-plhtml <source_file> [<input_file>]
+plhtml <source_file> [--js]
 ```
+
+To translate PL/HTML source to JavaScript code that can be run in the browser's console, pass `--js` as the second argument.
 
 # Specification
 Keywords:
@@ -98,7 +99,7 @@ Comparison operators:
  - `&lt;`
  - `&gt;`
  - `&leq;`
- - `&geq;`,
+ - `&geq;`
  - `&equals;`
  - `&ne;`
 

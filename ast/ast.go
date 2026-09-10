@@ -1,8 +1,8 @@
 package ast
 
 import (
-    "go/constant"
-    "strings"
+	"go/constant"
+	"strings"
 )
 
 type Node interface {

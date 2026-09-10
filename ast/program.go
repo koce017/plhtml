@@ -1,23 +1,23 @@
 package ast
 
 type ProgramNode struct {
-    Line  int
-    Title StringConstNode
-    Body  ProgramBodyNode
+	Line  int
+	Title StringConstNode
+	Body  ProgramBodyNode
 }
 
 func (node ProgramNode) GetLine() int {
-    return node.Line
+	return node.Line
 }
 
 func (node ProgramNode) ToString() string {
-    return node.Title.ToString() + node.Body.ToString() + "\n"
+	return node.Body.ToString() + "\n"
 }
 
 func (node *ProgramNode) AcceptAnalyzer(analyzer IAnalyzer) {
-    analyzer.VisitProgram(node)
+	analyzer.VisitProgram(node)
 }
 
 func (node *ProgramNode) AcceptInterpreter(interp IInterpreter) {
-    interp.VisitProgram(node)
+	interp.VisitProgram(node)
 }
