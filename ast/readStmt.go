@@ -13,7 +13,7 @@ func (node ReadStmtNode) GetLine() int {
 }
 
 func (node ReadStmtNode) ToString(lvl int) string {
-    return ident(lvl, "Read "+node.Identifier.ToString())
+    return ident(lvl, node.Identifier.ToString()+" = prompt(\"Enter value for "+node.Identifier.ToString()+":\")")
 }
 
 func (node *ReadStmtNode) AcceptAnalyzer(analyzer IAnalyzer) {

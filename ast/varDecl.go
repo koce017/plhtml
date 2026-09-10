@@ -14,7 +14,7 @@ func (node VarDeclNode) GetLine() int {
 }
 
 func (node VarDeclNode) ToString(lvl int) string {
-    return ident(lvl, node.Type.ToString()+" "+node.Identifier.ToString())
+    return ident(lvl, "let "+node.Identifier.ToString())
 }
 
 func (node *VarDeclNode) AcceptAnalyzer(analyzer IAnalyzer) {

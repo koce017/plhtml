@@ -14,10 +14,11 @@ func (node ControlFlowStmtNode) GetLine() int {
 }
 
 func (node ControlFlowStmtNode) ToString(lvl int) string {
-    str := ident(lvl, node.Type.String()+" "+node.Condition.ToString())
+    str := ident(lvl, node.Type.String()+" ("+node.Condition.ToString()+") {")
     for _, stmt := range node.Statements {
         str += "\n" + stmt.ToString(lvl+1)
     }
+	str += "\n" + ident(lvl, "}");
     return str
 }
 

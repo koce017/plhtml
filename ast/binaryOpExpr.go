@@ -1,8 +1,8 @@
 package ast
 
 import (
-    "go/constant"
-    "plhtml/token"
+	"go/constant"
+	"plhtml/token"
 )
 
 type BinaryOpExprNode struct {
