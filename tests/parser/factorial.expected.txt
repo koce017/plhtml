@@ -1,7 +1,7 @@
 "Factorial"
 Main:
-    integer quit
-    While quit NeqOp 1
+    string quit
+    While quit NeqOp "q"
         integer n
         integer i
         integer fact
@@ -13,5 +13,5 @@ Main:
             fact = fact * i
             i = i + 1
         Write: "Factorial of " + n + " is " + fact
-        Write: "\nType 1 to quit: "
+        Write: "\nType q to quit: "
         Read quit

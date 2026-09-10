@@ -1,7 +1,7 @@
 "Fibonacci Series"
 Main:
-    integer quit
-    While quit NeqOp 1
+    string quit
+    While quit NeqOp "q"
         integer a
         integer b
         integer c
@@ -18,5 +18,5 @@ Main:
             a = b
             b = c
             i = i + 1
-        Write: "\nType 1 to quit: "
+        Write: "\nType q to quit: "
         Read quit

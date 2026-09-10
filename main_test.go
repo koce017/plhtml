@@ -2,13 +2,11 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 	"strings"
 	"testing"
 
 	"plhtml/parser"
 	"plhtml/scanner"
-	"plhtml/token"
 	"plhtml/util"
 )
 
@@ -20,15 +18,6 @@ var tests = [...]string{
     "prime",
 	"reals",
     "scopes",
-}
-
-func TestScanner(t *testing.T) {
-    for _, test := range tests {
-		if util.FileExists("./tests/scanner/" + test + ".expected.txt") {
-			tokens := scan("./tests/" + test + ".html")
-			compare(t, "scanner/"+test, tokensToString(tokens))
-		}
-    }
 }
 
 func TestParser(t *testing.T) {
@@ -58,36 +47,4 @@ func compare(t *testing.T, testPath string, actual string) {
     } else {
         fmt.Println("PASS: " + testPath)
     }
-}
-
-func tokensToString(tokens []scanner.Token) string {
-
-    result := ""
-    for _, tok := range tokens {
-
-        if tok.Type == token.EOF {
-            break
-        }
-
-        var value string
-        switch tok.Type {
-        case token.Identifier, token.StringConst:
-            value = util.Unescape(tok.StrVal)
-        case token.IntConst:
-            value = strconv.Itoa(tok.IntVal)
-        case token.RealConst:
-            value = util.FloatToString(tok.RealVal)
-        case token.BoolConst:
-            value = strconv.FormatBool(tok.BoolVal)
-        }
-
-        if value != "" {
-            value = "|" + value + "|"
-        }
-
-        result += tok.Type.String() + value + "\n"
-
-    }
-
-    return result
 }

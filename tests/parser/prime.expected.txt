@@ -1,7 +1,7 @@
 "Prime Checker"
 Main:
-    integer quit
-    While quit NeqOp 1
+    string quit
+    While quit NeqOp "q"
         integer n
         integer i
         boolean prime
@@ -17,5 +17,5 @@ Main:
             Write: n + " is prime"
         If !prime
             Write: n + " is not prime"
-        Write: "\nType 1 to quit: "
+        Write: "\nType q to quit: "
         Read quit
